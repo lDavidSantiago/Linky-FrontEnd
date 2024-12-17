@@ -3,17 +3,18 @@ import { HiOutlineLink } from "react-icons/hi";
 import { FaGithub } from "react-icons/fa";
 import { CiSearch } from "react-icons/ci";
 import ShinyButton from "./ShinyButton";
+import { BrowserRouter, Link } from 'react-router-dom'
 
 function Navbar() {
     return (
         <>
             <nav className="flex w-full pb-3 pt-4 lg:px-4 sticky top-0 z-50 bg-white dark:bg-neutral-900 border-b border-neutral-700">
                 <div className="container mx-auto flex flex-wrap items-center justify-between px-4">
-                    {/* Logo Section */}
+                    
                     <div className="flex items-center space-x-3">
                         <a
                             className="flex items-center space-x-3 transition-opacity hover:opacity-80"
-                            href="#"
+                            href="/"
                         >
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -37,7 +38,7 @@ function Navbar() {
                             </svg>
                             <HiOutlineLink className="text-white text-x2 w-4 h-4" />
                             <span className="self-center whitespace-nowrap text-lg font-medium tracking-tight dark:text-white">
-                                Linky
+                                MiniURL
                             </span>
                         </a>
                     </div>
@@ -60,7 +61,9 @@ function Navbar() {
                         </button>
                         
                         {/* Custom Shiny Button */}
-                        <ShinyButton />
+                        <Link to='/dashboard'>
+                        <ShinyButton/>
+                       </Link>
                     </div>
                 </div>
             </nav>
